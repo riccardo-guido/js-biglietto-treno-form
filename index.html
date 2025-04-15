@@ -12,53 +12,79 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
-
-    
   </head>
   <body>
-   <main>
-    <section>
+    <main>
+      <section>
         <div class="container">
-            <h1 class="my-5">Calcolo biglietto treno</h1>
+          <h1 class="my-5">Calcolo biglietto treno</h1>
         </div>
-    </section>
-   
-    <section id="section-form-biglietto">
+      </section>
+
+      <section id="section-form-ticket">
         <div class="container mt-5">
-            <form class="row" id="form-biglietto">
-                <div class="col-md-4">
-                    <label for="fullname-input" class="form-label">Nome Completo</label>
-                    <input type="text" id="fullname-input" class="form-control">
-                </div>
-                <div class="col-md-4">
-                    <label for="km-input" class="form-label">Km da percorrere</label>
-                    <input type="number" id="km-input" class="form-control">
-                </div>
-                <div class="col-md-4">
-                    <label for="age-input" class="form-label">Età</label>
-                    <select id="age-input" class="form-select">
-                        <option>Maggiorenne</option>
-                        <option>Over 65</option>
-                        <option>Minorenne</option>
-                    </select>
-                </div>
+          <form class="row" id="form-ticket">
+            <div class="col-md-4">
+              <label for="fullname-input" class="form-label"
+                >Nome Completo</label
+              >
+              <input type="text" id="fullname-input" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="km-input" class="form-label">Km da percorrere</label>
+              <input type="number" id="km-input" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="age-input" class="form-label">Età</label>
+              <select id="age-input" class="form-select">
+                <option value="minor">Minorenne</option>
+                <option value="over18">Maggiorenne</option>
+                <option value="over65">Over 65</option>
+              </select>
+            </div>
 
-                <div class="col-12">
-                    <input type="submit" value="Calcola" class="btn btn-primary">
-                    <input type="reset" value="Annulla" class="btn btn-warning ms-3">
-
-
-                </div>
-            </form>
+            <div class="col-12">
+              <input type="submit" value="Calcola" class="btn btn-primary" />
+              <input
+                type="reset"
+                value="Annulla"
+                class="btn btn-warning ms-3"
+              />
+            </div>
+          </form>
         </div>
-    </section>
-    <section id="section-biglietto">
-        <div class="container mt-5"></div>
-    </section>
-   </main>
-      
-       <script src="./script.js"></script>
+      </section>
+      <section id="section-ticket" class="d-none">
+        <div class="container mt-5">
+          <div class="row g-0">
+            <div class="col">
+              <div>Nome passeggero</div>
+              <div id="fullname-ticket" class="fw-bold">ciao</div>
+            </div>
+            <div class="col">
+              <div>Offerta</div>
+              <div id="type-ticket" class="fw-bold">ciao</div>
+            </div>
+            <div class="col">
+              <div>Carrozza</div>
+              <div id="coach-ticket" class="fw-bold">ciao</div>
+            </div>
+            <div class="col">
+              <div>Codice CP</div>
+              <div id="cp-code-ticket" class="fw-bold">ciao</div>
+            </div>
+            <div class="col">
+              <div>Costo biglietto</div>
+              <div id="price-ticket" class="fw-bold">ciao</div>
+              <div id="discount-ticket" class="fw-bold d-none text-danger">
+                ciao
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
   </body>
- 
 </html>
